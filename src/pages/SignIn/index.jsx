@@ -18,11 +18,7 @@ export default function SignIn() {
   }
   
 /*   function handleSuccess(response){
-    setToken(response.data.token);
-    setUserData(response.data);
-    
-    localStorage.setItem('token', response.data.token);
-    localStorage.setItem('userData', JSON.stringify(response.data));
+
 
     navigate('/lands');
     
@@ -35,7 +31,6 @@ export default function SignIn() {
 
   return (
     <Container>
-      <img src="" alt=""/>
       <Form onSubmit={handleSignIn}>
 
           <Input 

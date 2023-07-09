@@ -1,15 +1,42 @@
-import "./css/App.css";
-import SignIn from "./pages/SignIn";
-import SignUp from "./pages/SignUp";
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import './css/index.css'
 
-function App() {
+import {
+  createBrowserRouter,
+  RouterProvider,
+} from "react-router-dom";
+import SignIn from './pages/SignIn/index.jsx';
+import SignUp from './pages/SignUp/index.jsx';
+import Home from './pages/Home';
+import Links from './pages/Links';
+import NewLink from './pages/NewLink';
 
-  return (
-    <>
-        {/* <SignUp/> */}
-        <SignIn/>
-    </>
-  )
-}
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <Home />,
+  },
+  {
+    path: "/sign-in",
+    element: <SignIn />,
+  },
+  {
+    path: "/sign-up",
+    element: <SignUp />,
+  },
+  {
+    path: "/links",
+    element: <Links />,
+  },
+  {
+    path: "/new-link",
+    element: <NewLink />,
+  },
+]);
 
-export default App
+ReactDOM.createRoot(document.getElementById('root')).render(
+  <React.StrictMode>
+    <RouterProvider router={router} />
+  </React.StrictMode>,
+)
