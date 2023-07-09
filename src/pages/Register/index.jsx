@@ -1,17 +1,22 @@
 import { useNavigate } from "react-router-dom";
 import { useState } from 'react';
 
-import { Container, Form, Input, Button, Link } from "./style";
+import { Container, Form, Input } from "./style";
 import api from "../../services/api";
 
-export default function SignUp(){
+export default function Register({ registered, setRegistered }){
     const navigate = useNavigate();
 
     const [userData, setUserData] = useState({});
 
-    function handleSignUp(e){
+    function handleRegister(e){
       e.preventDefault();
-      api.signUp(userData).then(() => navigate('/sign-in')).catch(handleFailure);
+      api.register(userData).then(handleSuccess).catch(handleFailure);
+    }
+
+    function handleSuccess(){
+      setRegistered(!registered);
+      navigate('/')
     }
   
     function handleFailure(error){
@@ -21,7 +26,7 @@ export default function SignUp(){
 
     return (
         <Container>
-            <Form onSubmit={handleSignUp}>
+            <Form onSubmit={handleRegister}>
               <Input 
               type="text"
               placeholder="Name"
@@ -38,18 +43,9 @@ export default function SignUp(){
               onChange={e => setUserData({...userData, email: e.target.value})}
               >
               </Input>
-    
-              <Input
-              type="password"
-              placeholder="Password"
-              value={userData.password || ''}
-              onChange={e => setUserData({...userData, password: e.target.value})}
-              >
-              </Input>
 
-              <Button type="submit">Sign Up</Button>
+              <button type="submit">Entrar</button>
             </Form>
-            <Link onClick={() => navigate('/sign-in')}>Already User? Sign In</Link>
         </Container>
       );
 }

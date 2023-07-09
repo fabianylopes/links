@@ -31,6 +31,8 @@ a:hover {
 }
 
 body {
+  background-color: rgb(47, 45, 45);
+  font-family: 'Oswald', sans-serif;
   margin: 0;
   display: flex;
   place-items: center;
@@ -41,36 +43,24 @@ body {
 h1 {
   font-size: 3.2em;
   line-height: 1.1;
+  font-family: 'Oswald', sans-serif;
 }
 
 button {
+  width: 250px;
+  height: 35px;
   border-radius: 8px;
   border: 1px solid transparent;
   padding: 0.6em 1.2em;
   font-size: 1em;
   font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
+  background-color: rgba(24, 119, 242, 1);;
   cursor: pointer;
   transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
-}
+
+

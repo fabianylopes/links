@@ -6,12 +6,6 @@ const Container = styled.div`
     justify-content: center;
     align-items: center;
     gap: 14px;
-
-    img{
-        width: 250px;
-        height: 250px;
-        border-radius: 50%;
-    }
 `
 
 const Form = styled.form`
@@ -23,34 +17,13 @@ const Form = styled.form`
 `
 
 const Input = styled.input`
-    width: 300px;
-    height: 45px;
+    width: 250px;
+    height: 35px;
     border: none;
     border-radius: 6px;
     padding: 5px;
     background-color: #000;
 
-    ::placeholder{
-        font-size: 14px;
-        line-height: 40px;
-}
-
-`
-const Button = styled.button`
-    width: 300px;
-    height: 40px;
-    border-radius: 6px;
-    background-color: #ffc72c;
-    cursor: pointer;
-
-    color: #8c0c20;
-    font-size: 16px;
-    font-weight: 700;
 `
 
-const Link = styled.a`
-    color: #ffc72c;
-    cursor: pointer;
-`
-
-export { Container, Form, Input, Button, Link }
+export { Container, Form, Input }

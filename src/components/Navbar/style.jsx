@@ -3,7 +3,7 @@ import styled from "styled-components";
 const Top = styled.div`
     width: 100vw;
     height: 68px;
-    background-color: #C3CFD9;
+    background-color: #fff;
 
     display: flex;
     justify-content: space-around;
@@ -17,7 +17,8 @@ const Top = styled.div`
 `
 
 const Title = styled.p`
-    color: #8c0c20;
+    color: rgb(47, 45, 45);;
+    font-family: 'Oswald', sans-serif;
     font-weight: 400;
     font-size: 24px;
     line-height: 40px;

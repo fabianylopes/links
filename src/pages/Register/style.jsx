@@ -23,8 +23,8 @@ const Form = styled.form`
 `
 
 const Input = styled.input`
-    width: 300px;
-    height: 45px;
+    width: 250px;
+    height: 35px;
     border: none;
     border-radius: 6px;
     padding: 5px;
@@ -33,24 +33,12 @@ const Input = styled.input`
     ::placeholder{
         font-size: 14px;
         line-height: 40px;
-}
-
-`
-const Button = styled.button`
-    width: 300px;
-    height: 40px;
-    border-radius: 6px;
-    background-color: #ffc72c;
-    cursor: pointer;
-
-    color: #8c0c20;
-    font-size: 16px;
-    font-weight: 700;
+    }
 `
 
 const Link = styled.a`
-    color: #ffc72c;
+    color: #fff;
     cursor: pointer;
 `
 
-export { Container, Form, Input, Button, Link }
+export { Form, Container, Input, Link }

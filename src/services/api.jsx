@@ -2,7 +2,7 @@ import axios from "axios";
 
 const BASE_URL = 'http://localhost:3000';
 
-function signUp(body){
+function register(body){
   const promise = axios.post(`${BASE_URL}/users`, body);
   return promise;
 }
@@ -22,6 +22,6 @@ function getLinks(){
   return promise;
 }
 
-const api = { signIn, signUp, insertLink, getLinks }
+const api = { signIn, register, insertLink, getLinks }
 
 export default api;
