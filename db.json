@@ -1,41 +1,16 @@
 {
   "links": [
     {
-      "title": "ChatGPT",
-      "link": "https://chat.openai.com/",
-      "id": 1
-    },
-    {
-      "title": "Outro",
-      "link": "https://chat.openai.com/",
-      "id": 2
-    },
-    {
-      "title": "Teste",
-      "link": "https://chat.openai.com/",
-      "id": 3
-    },
-    {
       "title": "Google",
-      "link": "www.google.com.br",
-      "id": 4
+      "link": "https://www.google.com/",
+      "id": 1
     }
   ],
   "users": [
     {
-      "name": "Jean",
-      "email": "jean@gmail.com",
+      "name": "Faby",
+      "email": "faby@gmail.com",
       "id": 1
-    },
-    {
-      "name": "Jean",
-      "email": "jean@gmail.com",
-      "id": 2
-    },
-    {
-      "name": "Leia",
-      "email": "leia@starwars.com",
-      "id": 3
     }
   ]
 }

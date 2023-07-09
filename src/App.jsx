@@ -1,11 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './css/index.css'
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
-import {
-  createBrowserRouter,
-  RouterProvider,
-} from "react-router-dom";
+import './css/index.css'
 import Register from './pages/Register/index.jsx';
 import Home from './pages/Home';
 import Links from './pages/Links';

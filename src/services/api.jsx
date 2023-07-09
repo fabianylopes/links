@@ -7,11 +7,6 @@ function register(body){
   return promise;
 }
 
-function signIn(body){
-  const promise = axios.post(`${BASE_URL}/sign-in`, body);
-  return promise;
-}
-
 function insertLink(body){
   const promise = axios.post(`${BASE_URL}/links`, body);
   return promise;
@@ -22,6 +17,6 @@ function getLinks(){
   return promise;
 }
 
-const api = { signIn, register, insertLink, getLinks }
+const api = { register, insertLink, getLinks }
 
 export default api;

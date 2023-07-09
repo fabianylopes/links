@@ -23,6 +23,15 @@ const Title = styled.p`
     font-size: 24px;
     line-height: 40px;
     cursor: pointer;
+    `
+
+const H2 = styled.h2`
+    color: rgb(47, 45, 45);
+    font-family: 'Oswald', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 40px;
+    cursor: pointer;
 `
 
-export { Top, Title }
+export { Top, Title, H2}

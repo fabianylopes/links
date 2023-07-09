@@ -11,17 +11,12 @@ export default function Register({ registered, setRegistered }){
 
     function handleRegister(e){
       e.preventDefault();
-      api.register(userData).then(handleSuccess).catch(handleFailure);
+      api.register(userData).then(handleSuccess).catch((error) => console.log(error));
     }
 
     function handleSuccess(){
       setRegistered(!registered);
       navigate('/')
-    }
-  
-    function handleFailure(error){
-      alert(`${error}!\nPreencha os campos corretamente!`);
-      setUserData({});
     }
 
     return (

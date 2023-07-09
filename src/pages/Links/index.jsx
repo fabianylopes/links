@@ -2,8 +2,8 @@ import { useNavigate, Link } from "react-router-dom";
 import { useState, useEffect } from 'react';
 
 import { Container, Title, Button } from "../Links/style";
-import api from "../../services/api";
 import Navbar from "../../components/Navbar";
+import api from "../../services/api";
 
 export default function Links() {
   const navigate = useNavigate();
@@ -18,11 +18,11 @@ export default function Links() {
 
   if(links.length === 0){
     return (
-      <>
+      <Container>
         <Navbar />
         <h2>Você ainda não tem nenhum link cadastrado</h2>
         <Button onClick={()=> navigate("/new-link")}>Cadastrar Link</Button>
-      </>
+      </Container>
     )
   }
 
@@ -36,8 +36,7 @@ export default function Links() {
             <Link key={l.id} to={l.link} target="_blank">
               <Title>{l.title}</Title>
             </Link>
-          )
-          
+          );
         })}
         <Button onClick={()=> navigate("/new-link")}>Cadastrar Link</Button>
       </Container>

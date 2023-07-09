@@ -5,22 +5,15 @@ import { Container, Form, Input } from "./style";
 import api from "../../services/api";
 import Navbar from "../../components/Navbar";
 
-
 export default function NewLink() {
   const navigate = useNavigate();
 
   const [linkInfo, setLinkInfo] = useState({});
-
   
   function saveLink(e){
     e.preventDefault();
 
-    api.insertLink(linkInfo).then(() => navigate('/links')).catch(handleFailure);
-  }
-
-  function handleFailure(error){
-    alert(`${error}!\nPreencha os campos corretamente!`);
-    setLinkInfo({});
+    api.insertLink(linkInfo).then(() => navigate('/links')).catch((error) => console.log(error));
   }
 
   return (
@@ -53,5 +46,5 @@ export default function NewLink() {
 
       </Container>
     </>
-  )
+  );
 }
